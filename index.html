@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PicPalette</title>
+		<meta author="Samantha Ebanks" content="WEBD 152 Final Assignment" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
+
+		<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+
+		<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+
+		<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+		<link href='http://fonts.googleapis.com/css?family=Overlock|Lobster' rel='stylesheet' type='text/css'>
+
+
+	</head>
+	<body>
+		<div id="wrapper">
+			<div class="row clearfix">
+				<div id="home">
+	            <div id="nav-anchor"></div>
+	            <nav>
+	            	<a id="touch-menu" class="mobile-menu" href="#"><i class="fa fa-bars fa-2x"></i> Menu</a>
+	                <ul class="menu">
+	                    <li><a href="#home">Home</a></li>
+	                    <li><a href="#features">Features</a></li>
+	                    <li><a href="#reviews">Reviews</a></li>
+	                    <li><a href="#download">Download Now</a></li>
+	                </ul>
+	            </nav>
+		        </div>
+	    	</div>
+
+			<div id="content">
+				<h1>PicPalette</h1>
+				<div class="row clearfix">
+					<div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 300px;">
+                        <!-- Slides Container -->
+					    <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 600px; height: 300px;">
+					        <div><img u="image" src="images/iphone1.png" /></div>
+					        <div><img u="image" src="images/iphone2.png" /></div>
+					        <div><img u="image" src="images/iphone3.png" /></div>
+					        <div><img u="image" src="images/iphone4.png" /></div>
+					    </div>
+
+					    <span u="arrowleft" class="jssora21l" style="width:55px;height:55px;top:123px;left:8px;">
+							</span>
+							<span u="arrowright" class="jssora21r" style="width:55px;height:55px;top:123px;right:8px">
+							</span>
+					</div>
+					
+				</div>
+
+				<div class="row clearfix">
+
+					<div id="features" class="column full">
+						<h1>Features</h1>
+						
+						<section class="column third">
+							<ul>
+								<li>With PicPalette you can reate unique colour palettes right on your device using images from the gallery or device storage.</li>
+								<li>Choose between palettes with three, five, or eight colours.</li>
+							</ul>	
+							<a href="images/thumb1.png" class="with-caption image-link" title="magic demo"><img src="images/thumb1.png" /></a>
+						</section>
+
+						<section class="column third">
+							<ul>
+								<li>Use your palettes to create custom gradients.</li>
+								<li>Apply your colour creations to your projects by using your palette's given hex or RGB codes.</li>
+							</ul>	
+							<a href="images/thumb2.png" class="with-caption image-link" title="gradient demo"><img src="images/thumb2.png" /></a>
+						</section>
+
+						<section class="column third">
+							<ul>
+								<li>Share your creations with friends via Facebook, Pinterest, Twitter, and email.</li>
+								<li>Rate other members' colour creations!</li>
+							</ul>	
+							<a href="images/thumb3.png" class="with-caption image-link" title="sharing demo"><img src="images/thumb3.png" /></a>
+						</section>
+						
+					</div>	
+
+				</div>
+
+				<div class="row clearfix">
+
+					<div id="reviews" class="column full">
+						<h1>Reviews</h1>
+						
+						<section class="column fourth">
+							<h3>My Mom:</h3>
+							<p>Best app ever! My life is now complete.  Without it I would be but a shell of a human being.</p>
+						</section>
+
+						<section class="column fourth">
+							<h3>Anonymous Unemployed Designer:</h3>
+							<p>Best app in the history of all time.  Can I have my $5 now?</p>
+						</section>
+
+						<section class="column fourth">
+							<h3>Cookie Monster:</h3>
+							<p>App make pretty colours from photo.  Me can have cookie now?  Om nom nom.</p>
+						</section>
+
+						<section class="column fourth">
+							<h3>Bill Gates:</h3>
+							<p>How did you get in my house?</p>
+						</section>
+						
+					</div>	
+
+				</div>
+
+				<div class="row clearfix">
+
+					<div id="download" class="column full">
+						<h1>Download Now</h1>
+						<p>Enter your email address below to register for exclusive news and updates from PicPalette!		
+						<form id="contact-form" action="#" method="post">
+						<div>
+							<label>
+								<span>*Email: </span>
+								<input placeholder="me@home.com" type="email" tabindex="2" required>
+							</label>	
+						</div>
+						<div>
+							<button name="submit" type="submit" id="contact-submit">Sign Up</button>
+						</div>			
+					</form>
+					<a href="#" class="button">DOWNLOAD NOW</a>	
+					</div>	
+				</div>
+			<footer>
+				<ul>
+					<li>Copyright 2014 PicPalette</li>
+					<li>info@picpalette.com</li>
+				</ul>	
+			</footer>		
+		</div>	
+
+		<script src="js/jquery.magnific-popup.js"></script>
+		<script src="js/jquery.scrollTo.js"></script>
+		<script src="js/jssor.slider.mini.js"></script>
+		<script>
+		    $(document).ready(function ($) {
+
+			    $(window).scroll(function(){
+		            var window_top = $(window).scrollTop() + 0; 
+		            var div_top = $('#nav-anchor').offset().top;
+		                if (window_top > div_top) {
+		                    $('nav').addClass('stick');
+		                } else {
+		                    $('nav').removeClass('stick');
+		                }
+		        });
+
+		        $("nav a").click(function(evn){
+		            evn.preventDefault();
+		            $('html,body').scrollTo(this.hash, this.hash); 
+		        });
+
+		        var aChildren = $("nav li").children(); 
+			    var aArray = []; 
+			    for (var i=0; i < aChildren.length; i++) {    
+			        var aChild = aChildren[i];
+			        var ahref = $(aChild).attr('href');
+			        aArray.push(ahref);
+			   	}
+
+			   	$(window).scroll(function(){
+		            var windowPos = $(window).scrollTop(); 
+		            var windowHeight = $(window).height(); 
+		            var docHeight = $(document).height();
+		            
+		            for (var i=0; i < aArray.length; i++) {
+		                var theID = aArray[i];
+		                var divPos = $(theID).offset().top; 
+		                var divHeight = $(theID).height(); 
+		                if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
+		                    $("a[href='" + theID + "']").addClass("nav-active");
+		                } else {
+		                    $("a[href='" + theID + "']").removeClass("nav-active");
+		                }
+		            }
+		            
+		            if(windowPos + windowHeight == docHeight) {
+		                if (!$("nav li:last-child a").hasClass("nav-active")) {
+		                    var navActiveCurrent = $(".nav-active").attr("href");
+		                    $("a[href='" + navActiveCurrent + "']").removeClass("nav-active");
+		                    $("nav li:last-child a").addClass("nav-active");
+		                }
+		            }
+		        });
+
+		        var options = {
+		        	$ArrowNavigatorOptions: {
+		                $Class: $JssorArrowNavigator$,
+		                $ChanceToShow: 2
+		            }
+		        };                            
+		        var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+
+		        function ScaleSlider() {
+		            var parentWidth = $('#slider1_container').parent().width();
+		            if (parentWidth) {
+		                jssor_slider1.$SetScaleWidth(parentWidth);
+		            }
+		            else
+		                window.setTimeout(ScaleSlider, 30);
+		        }
+		        
+		        ScaleSlider();
+		        if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
+		            $(window).bind('resize', ScaleSlider);
+		        }
+		       
+		    });
+		</script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var touch = $("#touch-menu");
+				var menu = $(".menu");
+
+				$(touch).on("click", function(e){
+					menu.slideToggle();
+				});
+
+				$(window).resize(function(){
+					var w = $(window).width();
+					if(w > 767 && menu.is(":hidden")) {
+						menu.removeAttr("style");
+					}
+				});
+
+				$('.with-caption').magnificPopup({
+					type: 'image',
+					closeBtnInside: false,
+					mainClass: 'mfp-with-zoom mfp-img-mobile',
+			  
+					image: {
+						verticalFit: true,
+						titleSrc: function(item) {
+			        
+			        var caption = item.el.attr('title');
+			        
+			        var pinItURL = "http://pinterest.com/pin/create/button/";
+			        
+			        pinItURL += '?url=' + 'http://dimsemenov.com/plugins/magnific-popup/';
+			        pinItURL += '&media=' + item.el.attr('href');
+			        pinItURL += '&description=' + caption;
+			        
+			        
+			        return caption + ' &middot; <a class="pin-it" href="'+pinItURL+'" target="_blank"><img src="http://assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>';
+						}
+					},
+			  
+			    gallery: {
+			      enabled: true 
+			    }, 
+
+			    callbacks: {
+			      open: function() {
+			        this.wrap.on('click.pinhandler', '.pin-it', function(e) {
+			          
+			          
+			        });
+			      },
+			      beforeClose: function() {
+			       
+			      }
+			    }
+			  
+				});
+			});
+		</script>
+			
+	</body>	
+</html>
